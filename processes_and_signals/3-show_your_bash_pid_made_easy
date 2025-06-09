@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
+# This script displays the PID and process name of processes containing the word "bash"
 
 # shellcheck disable=SC2009
 
 for pid in /proc/[0-9]*; do
-    if grep -q bash "$pid/comm" 2>/dev/null; then
+    if grep -qi bash "$pid/comm" 2>/dev/null; then
         echo "$(basename "$pid") $(cat "$pid/comm")"
     fi
 done
