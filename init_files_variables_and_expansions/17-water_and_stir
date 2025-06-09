@@ -1,2 +1,3 @@
 #!/bin/bash
-echo -e '#!/bin/bash\nSUM=$((WATER + STIR))\necho "The result, in conceptual base bestchol, is: $SUM"' > add_numbers.sh && chmod +x add_numbers.sh
+printf '%s\n' '#!/bin/bash' 'SUM=$((WATER + STIR))' 'echo "The result, in conceptual base bestchol, is: $SUM"' > add_water_stir.sh
+chmod +x add_water_stir.sh
