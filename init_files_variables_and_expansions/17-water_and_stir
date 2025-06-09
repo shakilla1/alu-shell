@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(echo obase=$bestchol | bc <<< $(( $(bc <<< "ibase=$water $WATER") + $(bc <<< "ibase=$stir $STIR") )))
+python3 -c "exec('w=\"$WATER\"\ns=\"$STIR\"\nwd=sum(\"water\".find(c)*5**i for i,c in enumerate(w[::-1]))\nsd=sum(\"stir\".find(c)*4**i for i,c in enumerate(s[::-1]))\nn=wd+sd\nr=\"\"\nd=\"bestchol\"\nwhile n:\n r=d[n%8]+r\n n//=8\nprint(r or \"b\")')"
