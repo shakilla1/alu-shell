@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Display time from 0:1 to 12:59 using while loops
 h=0
 while [ $h -le 12 ]
 do
