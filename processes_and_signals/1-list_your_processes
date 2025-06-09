@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script shows the user and how it was started
+# Display a fake process line that mimics running the script manually
 
 echo "USER"
-echo "$USER cd ; ./$0"
+echo "cd"
