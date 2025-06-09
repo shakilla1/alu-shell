@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ -n "$1" ]; then echo "$1" | tr 'A-Za-z' 'N-ZA-Mn-za-m'; fi
+tr 'A-Za-z' 'N-ZA-Mn-za-m'
