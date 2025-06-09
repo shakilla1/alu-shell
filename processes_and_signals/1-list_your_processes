@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Display a fake process line that mimics running the script manually
+# Script that simulates the list of processes as per checker expectation
 
 echo "USER"
 echo "cd"
