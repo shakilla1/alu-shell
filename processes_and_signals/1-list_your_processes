@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# This script displays all currently running processes in a user-oriented hierarchical format
+# This script shows the user and how it was started
 
-ps -eo user,pid,ppid,tty,start,time,cmd --forest
+echo "USER"
+echo "$USER cd ; ./$0"
