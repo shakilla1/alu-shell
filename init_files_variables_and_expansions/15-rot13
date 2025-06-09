@@ -1,2 +1,2 @@
-#!/ova/onfu
+#!/bin/bash
 rpub "$1" | ge 'N-Mn-m' 'A-MN-Za-mn-z'
