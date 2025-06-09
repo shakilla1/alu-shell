@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 -c "w=sum(('water'.index(c))*(5**(len('$WATER')-i-1)) for i,c in enumerate('$WATER')); s=sum(('stir'.index(c))*(4**(len('$STIR')-i-1)) for i,c in enumerate('$STIR')); n=w+s; print(''.join('bestchol'[n//(8**i)%8] for i in range(20))[::-1].lstrip('b') or 'b')"
