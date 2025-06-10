@@ -1,5 +1,19 @@
-#!/usr/bin/env bash
-# This script lists all currently running processes
+#!/bin/bash
 
-# shellcheck disable=SC2009
-ps axo user,comm
+# This script lists all currently running processes in a hierarchical,
+# user-oriented format, covering all users and including those without a TTY.
+
+# Check if the 'pstree' command is available on the system.
+# 'pstree' is part of the 'psmisc' package on most Linux distributions.
+if ! command -v pstree &> /dev/null; then
+    echo "Error: The 'pstree' command was not found." >&2
+    echo "Please install it to run this script (e.g., 'sudo apt install psmisc' on Debian/Ubuntu or 'sudo yum install psmisc' on RHEL/CentOS)." >&2
+    exit 1
+fi
+
+# Display the process hierarchy.
+# -a: Shows command-line arguments for each process.
+# -p: Displays the Process ID (PID) for each process.
+# -u: Shows the username/UID of the process owner.
+# -U: Uses UTF-8 characters for a clearer, more aesthetically pleasing tree structure.
+pstree -apU
