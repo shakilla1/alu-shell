@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Script that simulates the list of processes as per checker expectation
+# This script displays all currently running processes in a user-oriented format, including process hierarchy
 
-echo "USER"
-echo "cd"
+ps -eo user,pid,ppid,stime,tty,cmd --forest
