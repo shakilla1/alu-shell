@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# This script displays all currently running processes in a user-oriented format, including process hierarchy
+# This script lists all currently running processes
 
-ps -eo user,pid,ppid,stime,tty,cmd --forest
+# shellcheck disable=SC2009
+ps axo user,comm
