@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# Function to handle SIGTERM signal
 
+# Function to handle SIGTERM signal
 term_handler() {
   echo "I am invincible!!!"
+  exit 0
 }
 
-# Trap SIGTERM signal and call term_handler
-trap 'term_handler' SIGTERM
+# Trap SIGTERM and call the handler
+trap term_handler SIGTERM
 
-# Infinite loop printing message every 2 seconds
+# Infinite loop
 while true; do
   echo "To infinity and beyond"
   sleep 2
