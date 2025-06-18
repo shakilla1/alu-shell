@@ -1,3 +1,2 @@
 #!/bin/bash
-printf '%s\n' '#!/bin/bash' 'SUM=$((WATER + STIR))' 'echo "The result, in conceptual base bestchol, is: $SUM"' > add_water_stir.sh
-chmod +x add_water_stir.sh
+printf "%o\n" $(($((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234))))) | tr 01234567 bestchol
