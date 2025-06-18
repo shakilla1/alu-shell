@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Lists all running processes in user-oriented format
+# Show all running processes with full info and history
 
-ps -eo user,comm
+ps aux --forest
