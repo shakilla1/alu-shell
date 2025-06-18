@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# This script prints "To infinity and beyond" every 2 seconds and handles SIGTERM by printing "I am invincible!!!"
+# This script prints "To infinity and beyond" every 2 seconds and handles SIGTERM by printing OK and exiting
 
 # Function to handle SIGTERM signal
 term_handler() {
-  echo "I am invincible!!!"
+  echo "OK"
   exit 0
 }
 
