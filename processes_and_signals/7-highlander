@@ -10,6 +10,6 @@ trap 'term_handler' SIGTERM
 
 # Infinite loop printing message every 2 seconds
 while true; do
-  echo "To infinity and beyond"
-  sleep 2
+echo "To infinity and beyond"
+sleep 2
 done
